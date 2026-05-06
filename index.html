@@ -1,0 +1,73 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Match</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Music Match</h1>
+      <p>당신의 취향에 맞는 노래를 추천해드립니다.</p>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <img src="image/img1.jpg" alt="장르 추천" />
+        <h3>장르 기반 추천</h3>
+        <select id="genreSelect">
+          <option value="pop">팝</option>
+          <option value="kpop">K-POP</option>
+          <option value="ballad">발라드</option>
+        </select>
+        <button onclick="recommendGenre()">추천 받기</button>
+      </div>
+
+      <div class="card">
+        <img src="image/img2.jpg" alt="기분 추천" />
+        <h3>기분 기반 추천</h3>
+        <select id="moodSelect">
+          <option value="happy">행복</option>
+          <option value="sad">슬픔</option>
+          <option value="excited">신남</option>
+        </select>
+        <button onclick="recommendMood()">추천 받기</button>
+      </div>
+
+      <div class="card">
+        <img src="image/img3.jpg" alt="랜덤 추천" />
+        <h3>랜덤 추천</h3>
+        <p>누를 때마다 다른 노래</p>
+        <button onclick="recommendRandom()">추천 받기</button>
+      </div>
+    </section>
+
+    <section class="result">
+      <h2>추천 결과</h2>
+      <img
+        id="songImage"
+        src=""
+        alt="노래 이미지"
+        style="width: 200px; border-radius: 10px; display: none"
+      />
+      <p id="resultText">버튼을 눌러 추천을 받아보세요</p>
+      <p id="commentText"></p>
+      <a id="videoLink" href="#" target="_blank"></a>
+      <br />
+      <iframe
+        id="videoFrame"
+        width="300"
+        height="170"
+        src=""
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+      <br />
+      <button onclick="resetResult()">초기화</button>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
